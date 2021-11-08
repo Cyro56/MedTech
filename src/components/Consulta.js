@@ -37,36 +37,51 @@ function Consulta() {
             <strong>Você tem sentido algum desses sintomas de Covid-19?</strong>
           </label>
           <br></br>
-          <input type="checkbox" id="doença1" name="doença1" value="HTML" />
-          <label for="doença1">Febre</label>
-          <input type="checkbox" id="doença2" name="doença2" value="HTML" />
-          <label for="doença2">Tosse seca</label>
-          <input type="checkbox" id="doença3" name="doença3" value="HTML" />
-          <label for="doença3">Cansaço</label>
-          <input type="checkbox" id="doença4" name="doença4" value="HTML" />
-          <label for="doença4">Dor no peito</label>
-          <input type="checkbox" id="doença5" name="doença5" value="HTML" />
-          <label for="doença5">Dificuldade de Respirar</label>
-          <input
-            selected
-            type="checkbox"
-            id="doença6"
-            name="doença6"
-            value="HTML"
-          />
-          <label for="doença6">Não</label>
+          <ul>
+            <li>
+              <input type="checkbox" id="doença1" name="doença1" value="HTML" />
+              <label for="doença1">Febre</label>
+            </li>
+            <li>
+              <input type="checkbox" id="doença2" name="doença2" value="HTML" />
+              <label for="doença2">Tosse seca</label>
+            </li>
+            <li>
+              <input type="checkbox" id="doença3" name="doença3" value="HTML" />
+              <label for="doença3">Cansaço</label>
+            </li>
+            <li>
+              <input type="checkbox" id="doença4" name="doença4" value="HTML" />
+              <label for="doença4">Dor no peito</label>
+            </li>
+            <li>
+              <input type="checkbox" id="doença5" name="doença5" value="HTML" />
+              <label for="doença5">Dificuldade de Respirar</label>
+            </li>
+            <li>
+              <input
+                selected
+                type="checkbox"
+                id="doença6"
+                name="doença6"
+                value="HTML"
+              />
+              <label for="doença6">Não</label>
+            </li>
+          </ul>
         </div>
         <div>
           <label>
-            <strong>Conte mais sobre oque você espera com a consulta</strong>
+            <strong>Explique com poucas palavras oque você está sentindo</strong>
+          </label>
+          <div>
             <textarea
-              row="6"
-              width="260px"
+              row="6"             
               id="sobre"
               name="sobre"
               required
             ></textarea>
-          </label>
+          </div>
         </div>
         <button class="botao" type="submit">
           Solicitar

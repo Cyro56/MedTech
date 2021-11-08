@@ -1,14 +1,33 @@
+import logo from "./logo.svg"
 import {BrowserRouter as Router, Switch,Route,Link} from "react-router-dom"
 import Home from "./components/Home"
 import Avaliação from "./components/Avaliação"
 import Consulta from "./components/Consulta"
-import Navbar from "./components/Navbar"
-import "bootstrap/dist/css/bootstrap.min.css"
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import {Nav, Navbar} from "react-bootstrap"
+
 
 function App() {
   return (
     <Router>
-      <Navbar/>
+      <Navbar bg="dark" variant="dark" sticky="top" expand="lg" collapseOnSelect>
+        <Navbar.Brand>
+          <img src={logo} width="40px" height="40px" />{' '}
+          MedTech
+        </Navbar.Brand>
+
+        <Navbar.Toggle />
+        <Navbar.Collapse>
+          <Nav>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="Consulta">Consulta</Nav.Link>
+            <Nav.Link href="Avaliação">Avaliação</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+     
+
       <Switch>
         <Route exact path="/">
           <Home />
