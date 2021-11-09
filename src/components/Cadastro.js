@@ -1,8 +1,11 @@
 import styles from "./Cadastro.module.css";
+import logo from "../logo.svg"
 function Cadastro() {
   return (
     <div className={styles.Cadastro}>
+      
       <div>
+        <img src={logo} width="509px" height="100px"/>
         <h1 id="titulo">MedTech</h1>
         <h2 id="subtitulo">Cadastro de usuários</h2>
       </div>
@@ -133,7 +136,7 @@ function Cadastro() {
             <button className={styles.Campo} type="submit">
               Concluído
             </button>
-          </div>         
+          </div>
         </fieldset>
       </form>
     </div>

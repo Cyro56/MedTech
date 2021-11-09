@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Navbar bg="dark" variant="dark" sticky="top" expand="lg" collapseOnSelect>
         <Navbar.Brand>
-          <img src={logo} width="40px" height="40px" />{' '}
+          <img src={logo} width="40px" height="40px" />
           MedTech
         </Navbar.Brand>
 
