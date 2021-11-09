@@ -1,34 +1,28 @@
 *{
-    
     margin: 0;
     padding: 0;
 }
 
 h1{
-    display: flex;    
-    justify-content: center;
+   
     font-family: sans-serif;
     color:#6909c4;
     margin-left: 7%;
 }
 
-
 h2{
-    display: flex;    
-    justify-content: center;    
     font-family: sans-serif;
     color:#6909c4;
-    
+    margin-left: 10%;
 }
 
 fieldset{
     border:0;
 }
 
-.Cadastro{     
-    
-    height: 60em;
-    width: 30em;    
+.Avaliacao{
+    width: 800px;
+    height: 900px;
     background-color:#F0F8FF;
     font-family:sans-serif;
     font-size: 1em;
@@ -44,7 +38,6 @@ input,select,textarea,button{
 }
 
 .campo{
-    
     margin-bottom: 1em;
 }
 
@@ -73,7 +66,7 @@ fieldset.grupo .campo{
 }
 
  .campo select:focus, .campo textarea:focus {
-    background:  #59429d;
+    background:  #c6bfe4;
 }
 
 .botao{

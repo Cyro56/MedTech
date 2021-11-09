@@ -76,7 +76,7 @@ function Consulta() {
           <strong>Explique com poucas palavras oque você está sentindo</strong>
           <textarea required></textarea>
         </label>
-        <button class="botao" type="submit" >
+        <button  type="submit" >
           Solicitar
         </button>
       </form>
