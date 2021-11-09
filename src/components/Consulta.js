@@ -9,6 +9,7 @@ function Consulta() {
           <label for="data">
             <strong>data e hora de sua consulta</strong>
           </label>
+          <br />
 
           <input
             type="datetime-local"
@@ -18,20 +19,20 @@ function Consulta() {
           />
         </div>
 
-        <div className={styles.Especialista}>
-          <label for="Especialista">
-            <strong>Selecione seu especialista</strong>
-          </label>
-          <select id="Especialista" required>
-            <option selected disabled value="">
-              Selecione
-            </option>
-            <option>Clínico geral</option>
-            <option>Psicólogo</option>
-            <option>Estudante de Medicina</option>
-            <option>Estudante de Psicologia</option>
-          </select>
-        </div>
+        <label for="Especialista">
+          <strong>Selecione seu especialista</strong>
+        </label>
+        <br />
+
+        <select id="Especialista" required>
+          <option selected disabled value="">
+            Selecione
+          </option>
+          <option>Clínico geral</option>
+          <option>Psicólogo</option>
+          <option>Estudante de Medicina</option>
+          <option>Estudante de Psicologia</option>
+        </select>
         <div>
           <label>
             <strong>Você tem sentido algum desses sintomas de Covid-19?</strong>
@@ -70,20 +71,12 @@ function Consulta() {
             </li>
           </ul>
         </div>
-        <div>
-          <label>
-            <strong>Explique com poucas palavras oque você está sentindo</strong>
-          </label>
-          <div>
-            <textarea
-              row="6"             
-              id="sobre"
-              name="sobre"
-              required
-            ></textarea>
-          </div>
-        </div>
-        <button class="botao" type="submit">
+
+        <label>
+          <strong>Explique com poucas palavras oque você está sentindo</strong>
+          <textarea required></textarea>
+        </label>
+        <button class="botao" type="submit" >
           Solicitar
         </button>
       </form>

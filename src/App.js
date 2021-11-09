@@ -1,6 +1,6 @@
 import logo from "./logo.svg"
 import {BrowserRouter as Router, Switch,Route,Link} from "react-router-dom"
-import Home from "./components/Home"
+import Cadastro from "./components/Cadastro"
 import Avaliação from "./components/Avaliação"
 import Consulta from "./components/Consulta"
 import "./App.css";
@@ -20,7 +20,7 @@ function App() {
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav>
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/">Cadastro</Nav.Link>
             <Nav.Link href="Consulta">Consulta</Nav.Link>
             <Nav.Link href="Avaliação">Avaliação</Nav.Link>
           </Nav>
@@ -30,7 +30,7 @@ function App() {
 
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Cadastro />
         </Route>
         <Route exact path="/Consulta">
           <Consulta />
