@@ -1,22 +1,51 @@
+import { FormEvent, useState } from "react";
 import styles from "./Cadastro.module.css";
+import Avaliação from "./Avaliação";
 import logo from "../logo.svg"
 function Cadastro() {
+ 
+  const[name, setNome] = useState([])
+
+
+
+  const saveId = async (ev) => {
+    if (name.name.length < 3) {
+      alert("digite ao menos 3 caracteres");
+      return;
+    }
+
+    await fetch("http://localhost:5000/pessoa", {
+      method: "POST", // usado para criar um novo registro (padrão REST)
+      headers: {
+        "Content-Type": "application/json", // define que o dado enviado é um json
+      },
+      body: JSON.stringify(name), // transformando um objeto em texto-json
+    });
+  };
+  
+  
+  
   return (
     <div className={styles.Cadastro}>
-      
       <div>
-        <img src={logo} width="509px" height="100px"/>
-        <h1 id="titulo">MedTech</h1>
+        <img src={logo} width="509px" height="100px" />
+        <h1 id="titulo">MedTech </h1>
         <h2 id="subtitulo">Cadastro de usuários</h2>
       </div>
-      <form>
+      <form onSubmit={saveId}>
         <fieldset className={styles.Campo}>
           <div>
-            <label for="nome">
+            <label for="name">
               <strong>Nome</strong>
             </label>
             <br />
-            <input type="text" name="nome" id="nome" required />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              onChange={(ev) => setNome({ name: ev.target.value })}
+              required
+            />
           </div>
 
           <div className={styles.campo}>
@@ -32,7 +61,12 @@ function Cadastro() {
             <strong>Email</strong>
           </label>
           <br />
-          <input type="email" name="email" id="email" />
+          <input
+            type="email"
+            name="email"
+            
+            id="email"
+          />
         </div>
         <div className={styles.Campo}>
           <label for="pass">Senha (mínimo 8 dígitos):</label>
@@ -141,6 +175,7 @@ function Cadastro() {
       </form>
     </div>
   );
-}
+  }
+
 
 export default Cadastro;
