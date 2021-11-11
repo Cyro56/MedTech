@@ -1,10 +1,30 @@
 import styles from "./Avaliacao.module.css";
+import { useEffect, useState } from "react";
+import axios from "axios"
+
 function Avaliação() {
+  const [name, setName] = useState([]);
+
+  useEffect(() => {
+   axios.get("http://localhost:5000/pessoa")    
+      .then((res) => {
+        setName(res.data[res.data.length -1].name)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  })
+
+
   return (
-    <div className={styles.Avaliacao}>
+   <div className={styles.Avaliacao}>
       <div>
+       
         <h1 id="titulo">Avaliação de serviço</h1>
-        <h2 id="subtitulo">Usuário X</h2>
+        <h2 id="subtitulo">
+         Olá {name}
+          , avalie sua experiência conosco
+        </h2>
       </div>
       <form>
         <div className={styles.campo}>
@@ -124,7 +144,7 @@ function Avaliação() {
         <button type="submit">Concluído</button>
       </form>
     </div>
-  );
+  )
 }
 
 export default Avaliação;
